@@ -1,0 +1,2 @@
+from .gerar_registros import GeradorDeRegistros 
+from .processar_registros import ProcessarRegistros
