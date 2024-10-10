@@ -20,13 +20,12 @@ class GeradorDeRegistros:
     def gerar_registro(self):
         nome = random.choice(self.moradores)
         pacote_empresa = random.choice(self.empresas)
-        pacote = f"Pacote da {pacote_empresa}"
         data_entrega = self.gerar_data();
         status = random.choice(self.status)
 
         return {
             "morador": nome,
-            "pacote": pacote,
+            "pacote": pacote_empresa,
             "recebido": data_entrega,
             "status": status
         }

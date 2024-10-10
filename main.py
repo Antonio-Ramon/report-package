@@ -1,5 +1,6 @@
 from scripts.gerar_registros import GeradorDeRegistros
 from scripts.processar_registros import ProcessarRegistros
+from scripts.salvar_relatorio import GerarPdf
 
 # Lista de nomes fictícios para os moradores
 NOMES = [
@@ -25,8 +26,8 @@ EMPRESAS = [
 
 # Lista de status possíveis
 STATUS = [
-    "Aguardando coleta do morador",
-    "Coletado pelo Morador"
+    "Aguardando",
+    "Coletado"
 ]
 
 def main():
@@ -35,7 +36,7 @@ def main():
     
     # Gerando quantidade de registros aleatórios desejado passando um número inteiro como parametro
     # @param [integer] numero de registros desejado
-    registros = gerador.gerar_registros(15)
+    registros = gerador.gerar_registros(100)
     
     # Exibindo os registros gerados (Opcional)
     # gerador.exibir_registros(registros)
@@ -43,8 +44,12 @@ def main():
     # Instanciando a classe ProcessarRegistros
     processador = ProcessarRegistros(registros)
     
-    # Mostrando os registros processados
-    print(processador.mostrar_registros())
+    # Gerando o relatório
+    relatorio = processador.gerar_relatorio()
+
+    # Salvar o relatório em PDF
+    relatorio_pdf = GerarPdf(relatorio)
+    relatorio_pdf.gerar_relatorio_pdf()
 
 # Executar apenas se o script for executado diretamente
 if __name__ == "__main__":
