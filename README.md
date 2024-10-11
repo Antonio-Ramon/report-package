@@ -15,7 +15,7 @@ Este projeto didático automatiza a geração de relatórios de entregas recebid
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/Antonio-Ramon/report-package.git
    ```
 2. Instale as dependências:
     ```bash
