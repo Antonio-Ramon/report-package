@@ -1,4 +1,4 @@
-# 📦 Sistema de Relatório de Entregas na Portaria
+# 📦 Relatório de Entregas na Portaria
 
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg) ![fpdf2](https://img.shields.io/badge/fpdf2-v2.5.5-orange.svg)
 
